@@ -14,6 +14,8 @@
 *	Retourne le choix du mode de jeu
 *
 *********************************************************/
+#include "representation.h"
+
 int choixMenu() {
 	int choixMode;
 	choixMode = -1;
@@ -25,8 +27,9 @@ int choixMenu() {
 		printf("3. Ordinateur contre humain\n");
 		printf("4. Ordinateur contre ordinateur\n");
 		printf("5. Quitter\n\n");
-		printf("Faites votre choix et appuyez sur \"Entrée\"");
+		printf("Faites votre choix et appuyez sur \"Entrée\"\n");
 		scanf("%i", &choixMode);
+		printf("\n");
 	}
 	return choixMode;
 }
