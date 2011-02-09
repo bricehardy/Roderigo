@@ -1,0 +1,70 @@
+TRoderigo
+v7
+r0
+t318368931.106116
+cCheck dependencies
+cCompileC build/Roderigo.build/Debug/Roderigo.build/Objects-normal/x86_64/main.o /Users/bricehardy/Documents/Roderigo/main.c normal x86_64 c com.apple.compilers.gcc.4_2
+cLd /Users/bricehardy/Documents/Roderigo/build/Debug/Roderigo normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004CAA740B00000000000000EE
+t1286239243
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004BBD2CE90000000000004174
+t1270689001
+s16756
+
+N/Users/bricehardy/Documents/Roderigo/build/Debug/Roderigo
+t1296676131
+s9240
+
+N/Users/bricehardy/Documents/Roderigo/build/Roderigo.build/Debug/Roderigo.build/Objects-normal/x86_64/Roderigo.LinkFileList
+c000000004D49B508000000000000006C
+t1296676104
+s108
+
+N/Users/bricehardy/Documents/Roderigo/build/Roderigo.build/Debug/Roderigo.build/Objects-normal/x86_64/main.o
+t1296676130
+s3776
+
+N/Users/bricehardy/Documents/Roderigo/main.c
+c000000004D49B2070000000000000080
+t1296675335
+s128
+i<stdio.h>
+i"main.h"
+
+N/Users/bricehardy/Documents/Roderigo/main.h
+c000000004D49B4910000000000000361
+t1296675985
+s865
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies318368904#318368904#0(0"0(0#1#0"3343187568374212096#0"0#
+
+CCompileC build/Roderigo.build/Debug/Roderigo.build/Objects-normal/x86_64/main.o /Users/bricehardy/Documents/Roderigo/main.c normal x86_64 c com.apple.compilers.gcc.4_2
+s318368904.915244
+e318368930.462198
+r1
+xCompileC
+xbuild/Roderigo.build/Debug/Roderigo.build/Objects-normal/x86_64/main.o
+x/Users/bricehardy/Documents/Roderigo/main.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@51"Compile /Users/bricehardy/Documents/Roderigo/main.c318368904#318368930#0(378"In file included from /Users/bricehardy/Documents/Roderigo/main.c:2:/Users/bricehardy/Documents/Roderigo/main.h: In function 'choixMenu':/Users/bricehardy/Documents/Roderigo/main.h:31: warning: control reaches end of non-void function/Users/bricehardy/Documents/Roderigo/main.c: In function 'main':/Users/bricehardy/Documents/Roderigo/main.c:6: warning: unused variable 'c'2(22@40"Control reaches end of non-void function318368930#139#98#2(7@65"In file included from /Users/bricehardy/Documents/Roderigo/main.c318368930#18446744073709551615#0#0(6@43"/Users/bricehardy/Documents/Roderigo/main.c318368135#2#0#2#0#0"0(13@87"Control reaches end of non-void function in /Users/bricehardy/Documents/Roderigo/main.h318368930#18446744073709551615#0#0(6@43"/Users/bricehardy/Documents/Roderigo/main.h318368785#31#0#31#0#0"0(6@43"/Users/bricehardy/Documents/Roderigo/main.h318368785#31#0#31#0#40"control reaches end of non-void function0(22@19"Unused variable 'c'318368930#302#76#0(6@43"/Users/bricehardy/Documents/Roderigo/main.c318368135#6#0#6#0#19"unused variable '*'0(0#0#43"/Users/bricehardy/Documents/Roderigo/main.c3917909816998063104#1266"    cd /Users/bricehardy/Documents/Roderigo    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bricehardy/Documents/Roderigo/build/Roderigo.build/Debug/Roderigo.build/Roderigo-generated-files.hmap -I/Users/bricehardy/Documents/Roderigo/build/Roderigo.build/Debug/Roderigo.build/Roderigo-own-target-headers.hmap -I/Users/bricehardy/Documents/Roderigo/build/Roderigo.build/Debug/Roderigo.build/Roderigo-all-target-headers.hmap -iquote /Users/bricehardy/Documents/Roderigo/build/Roderigo.build/Debug/Roderigo.build/Roderigo-project-headers.hmap -F/Users/bricehardy/Documents/Roderigo/build/Debug -I/Users/bricehardy/Documents/Roderigo/build/Debug/include -I/Users/bricehardy/Documents/Roderigo/build/Roderigo.build/Debug/Roderigo.build/DerivedSources/x86_64 -I/Users/bricehardy/Documents/Roderigo/build/Roderigo.build/Debug/Roderigo.build/DerivedSources -c /Users/bricehardy/Documents/Roderigo/main.c -o /Users/bricehardy/Documents/Roderigo/build/Roderigo.build/Debug/Roderigo.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/bricehardy/Documents/Roderigo/build/Debug/Roderigo normal x86_64
+s318368930.462281
+e318368931.105934
+r1
+xLd
+x/Users/bricehardy/Documents/Roderigo/build/Debug/Roderigo
+xnormal
+xx86_64
+lSLF07#2@62"Link /Users/bricehardy/Documents/Roderigo/build/Debug/Roderigo318368930#318368931#0(0"0(0#0#0"8610769088#492"    cd /Users/bricehardy/Documents/Roderigo    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/bricehardy/Documents/Roderigo/build/Debug -F/Users/bricehardy/Documents/Roderigo/build/Debug -filelist /Users/bricehardy/Documents/Roderigo/build/Roderigo.build/Debug/Roderigo.build/Objects-normal/x86_64/Roderigo.LinkFileList -mmacosx-version-min=10.6 -o /Users/bricehardy/Documents/Roderigo/build/Debug/Roderigo0#
+

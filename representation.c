@@ -13,38 +13,31 @@ void initOthellier(Othellier* othellier)
 {
 	int i;
 
-	for (i = 0; i < 100; i++)
-	{
-		othellier->plateau[i] = VIDE;
-	}
-
-	for (i = 11; i <= 18; i++)
-	{
-		othellier->plateau[i] = BORD;
-	}
-
-	for (i = 21; i <= 81; i = i + 10)
+	for (i = 0; i < 10; i++)
 	{
 		othellier->plateau[i] = BORD;
 	}
 	
-	for (i = 28; i <= 88; i = i + 10)
-	{
-		othellier->plateau[i] = BORD;
+	for (i = 10; i < 100; i++) {
+		if (i % 10 == 0 || i % 10 == 9 || i >= 90)
+		{
+			othellier->plateau[i] = BORD;
+		}
+		else
+		{
+			othellier->plateau[i] = VIDE;
+		}
 	}
 	
-	for (i = 89; i < 88; i++)
-	{
-		othellier->plateau[i] = BORD;
-	}
 	
 	othellier->plateau[44] = NOIR;
 	othellier->plateau[45] = BLANC;
 	othellier->plateau[55] = NOIR;
 	othellier->plateau[54] = BLANC;
 	
-	othellier->joueur = NOIR;
-	othellier->materiel = 64;
+	othellier->score[NOIR] = 2;
+	othellier->score[BLANC] = 2;
+	othellier->materiel = 60;
 }
 
 void afficheOthellier(Othellier* othellier)
@@ -55,16 +48,35 @@ void afficheOthellier(Othellier* othellier)
 		switch (othellier->plateau[i])
 		{
 			case NOIR:
-				printf("| x |");
+				printf("| X |");
 				break;
 			case BLANC:
-				printf("| o |");
+				printf("| O |");
 				break;
 			case JOUABLE:
 				printf("| . |");
 				break;
 			default:
-				printf("|   |");
+				if (i >= 1 && i < 9)
+				{
+					printf("| %c |", 'A' + i - 1);
+				}
+				else if (i >= 91 && i < 99)
+				{
+					printf("| %c |", 'A' + i - 91);
+				}
+				else if (i % 10 == 9 && i != 9 && i != 99)
+				{
+					printf("| %d |", (i - 9) / 10);
+				}
+				else if (i % 10 == 0 && i != 0 && i != 90)
+				{
+					printf("| %d |", i / 10);
+				}
+				else
+				{
+					printf("|   |");
+				}
 				break;
 		}
 		if (i % 10 == 9)
@@ -72,4 +84,5 @@ void afficheOthellier(Othellier* othellier)
 			printf("\n");
 		}
 	}
+	printf("\n\nPions :\nNOIR  : %d\nBLANC : %d\n\n", othellier->score[NOIR], othellier->score[BLANC]);
 }

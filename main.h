@@ -15,21 +15,5 @@
 *
 *********************************************************/
 #include "representation.h"
-
-int choixMenu() {
-	int choixMode;
-	choixMode = -1;
-	
-	while (choixMode < 1 || choixMode > 5) {
-		printf("----- Choisissez le mode de jeu -----\n\n");
-		printf("1. Humain contre humain\n");
-		printf("2. Humain contre ordinateur\n");
-		printf("3. Ordinateur contre humain\n");
-		printf("4. Ordinateur contre ordinateur\n");
-		printf("5. Quitter\n\n");
-		printf("Faites votre choix et appuyez sur \"Entrée\"\n");
-		scanf("%i", &choixMode);
-		printf("\n");
-	}
-	return choixMode;
-}
+#include "gestion.h"
+#include <stdlib.h>

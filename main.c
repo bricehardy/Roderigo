@@ -4,6 +4,9 @@
 int main (int argc, const char * argv[]) {
 	int menu;
 	bool continuerProgramme = True;
+	Coup coup;
+	coup.position = 45;
+	coup.joueur = NOIR;
 	
 	while (continuerProgramme)
 	{
@@ -16,6 +19,7 @@ int main (int argc, const char * argv[]) {
 				Othellier othellier;
 				initOthellier(&othellier);
 				afficheOthellier(&othellier);
+				estJouable(&othellier, coup);
 				
 				break;
 			case 2:
