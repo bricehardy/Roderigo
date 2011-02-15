@@ -6,6 +6,9 @@
  *  Copyright 2011 __MyCompanyName__. All rights reserved.
  *
  */
+#ifndef __representation__
+#define __representation__
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -36,8 +39,8 @@ typedef struct {
 typedef int bool;
 enum {False, True};
 
-int directions[8];
-directions = {NORD + OUEST, NORD, NORD + EST, OUEST, EST, SUD + OUEST, SUD, SUD + EST};
 
 void initOthellier(Othellier* othellier);
 void afficheOthellier(Othellier* othellier);
+
+#endif

@@ -14,6 +14,11 @@
 *	Retourne le choix du mode de jeu
 *
 *********************************************************/
+#ifndef __main__
+#define __main__
+
 #include "representation.h"
 #include "gestion.h"
 #include <stdlib.h>
+
+#endif

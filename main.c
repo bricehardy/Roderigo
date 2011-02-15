@@ -4,6 +4,7 @@
 int main (int argc, const char * argv[]) {
 	int menu;
 	bool continuerProgramme = True;
+	bool statutPartie = True;
 	Coup coup;
 	coup.position = 45;
 	coup.joueur = NOIR;
@@ -15,12 +16,15 @@ int main (int argc, const char * argv[]) {
 		switch (menu)
 		{
 			case 1:
-				printf("Vous avez choisi de jouer contre un autre humain.\n");
-				Othellier othellier;
-				initOthellier(&othellier);
-				afficheOthellier(&othellier);
-				estJouable(&othellier, coup);
-				
+				while (statutPartie)
+				{
+					printf("Vous avez choisi de jouer contre un autre humain.\n");
+					Othellier othellier;
+					initOthellier(&othellier);
+					afficheOthellier(&othellier);
+					estJouable(&othellier, coup);
+					scanf("%d", &statutPartie);
+				}
 				break;
 			case 2:
 				printf("Vous avez choisi de jouer contre un ordinateur.\n");

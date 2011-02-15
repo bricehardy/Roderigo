@@ -32,19 +32,20 @@ int choixMenu()
 
 int estJouable(Othellier* othellier, Coup coup)
 {
+	int directions[8] = {NORD + OUEST, NORD, NORD + EST, OUEST, EST, SUD + OUEST, SUD, SUD + EST};
 	int i;
 	for (i = 0; i < 8; i++)
 	{
-		if (othellier->plateau[coup->position + directions[i]] != coup->joueur)
+		if ((othellier->plateau[coup.position + directions[i]] != coup.joueur) && othellier->plateau[i] != BORD)
 		{
-			coup->position = coup->position + directions[i];
-			estJouable(othellier* othellier, Coup coup);
+			coup.position = coup.position + directions[i];
+			estJouable(othellier, coup);
 		}
 		else
 		{
-			if (coup->position == VIDE)
-				othellier->plateau[coup->position] = JOUABLE;
-			break
+			if (othellier->plateau[coup.position] == VIDE)
+				return othellier->plateau[coup.position] = JOUABLE;
+			break;
 		}
 		
 	}

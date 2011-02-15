@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8DD76FAC0486AB0100D96B5E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
 		8DD76FB00486AB0100D96B5E /* Roderigo.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* Roderigo.1 */; };
+		C49E1D5512FA1792001B3CE7 /* representation.c in Sources */ = {isa = PBXBuildFile; fileRef = C49E1D5412FA1792001B3CE7 /* representation.c */; };
+		C4A03E6D1302E8AF00639777 /* gestion.c in Sources */ = {isa = PBXBuildFile; fileRef = C4A03E6C1302E8AF00639777 /* gestion.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,11 @@
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		8DD76FB20486AB0100D96B5E /* Roderigo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Roderigo; sourceTree = BUILT_PRODUCTS_DIR; };
+		C41051BB12F9E970007C9EA4 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		C49E1D5312FA1792001B3CE7 /* representation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = representation.h; sourceTree = "<group>"; };
+		C49E1D5412FA1792001B3CE7 /* representation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = representation.c; sourceTree = "<group>"; };
+		C4A03E6B1302E8AF00639777 /* gestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gestion.h; sourceTree = "<group>"; };
+		C4A03E6C1302E8AF00639777 /* gestion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gestion.c; sourceTree = "<group>"; };
 		C6A0FF2C0290799A04C91782 /* Roderigo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Roderigo.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +61,11 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C4A03E6B1302E8AF00639777 /* gestion.h */,
+				C4A03E6C1302E8AF00639777 /* gestion.c */,
+				C49E1D5312FA1792001B3CE7 /* representation.h */,
+				C49E1D5412FA1792001B3CE7 /* representation.c */,
+				C41051BB12F9E970007C9EA4 /* main.h */,
 				08FB7796FE84155DC02AAC07 /* main.c */,
 			);
 			name = Source;
@@ -126,6 +138,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76FAC0486AB0100D96B5E /* main.c in Sources */,
+				C49E1D5512FA1792001B3CE7 /* representation.c in Sources */,
+				C4A03E6D1302E8AF00639777 /* gestion.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
