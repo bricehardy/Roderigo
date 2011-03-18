@@ -1,46 +1,44 @@
-#include <stdio.h>
-#include "main.h"
+#include "structure.h"
 
-int main (int argc, const char * argv[]) {
-	int menu;
-	bool continuerProgramme = True;
-	bool statutPartie = True;
+int main(){
+	Othellier dame;
+	Joueur joueur1, joueur2;
 	Coup coup;
-	coup.position = 45;
-	coup.joueur = NOIR;
+	int nombre, fonction;
+	bool continuerPartie = True;
 	
-	while (continuerProgramme)
-	{
-		menu = choixMenu();
-		
-		switch (menu)
-		{
+	afficheMenu();
+	scanf("%d", &nombre);
+	fonction = choix(nombre);
+	
+	if (!fonction)
+		printf("Choix incorrect");
+	else{
+		switch(fonction){
 			case 1:
-				while (statutPartie)
-				{
-					printf("Vous avez choisi de jouer contre un autre humain.\n");
-					Othellier othellier;
-					initOthellier(&othellier);
-					afficheOthellier(&othellier);
-					estJouable(&othellier, coup);
-					scanf("%d", &statutPartie);
-				}
+				afficheRegles();
 				break;
 			case 2:
-				printf("Vous avez choisi de jouer contre un ordinateur.\n");
+				while (continuerPartie) {
+					regroupe(&dame, &coup, &joueur1, &joueur2);
+					printf("Continuer à jouer ? (1 OUI, 0 NON\n");
+					scanf("%d", &continuerPartie);
+					printf("\n");
+				}
+				
 				break;
 			case 3:
-				printf("Vous avez choisi de jouer contre un ordinateur.\n");
+				printf("Option indisponible pour l'instant");
 				break;
 			case 4:
-				printf("Vous avez choisi d'assister à un match entre deux ordinateurs.\n");
+				printf("Option indisponible pour l'instant");
 				break;
 			case 5:
-				printf("Petit joueur...\n");
-				printf("À la prochaine !!");
-				continuerProgramme = False;
+				printf("Petit joueur!!!");
 				break;
 		}
 	}
+	
+	printf("\n");
 	return 0;
 }
