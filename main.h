@@ -17,7 +17,6 @@
 #include "infos.h"
 
 int main (int argc, const char * argv[]);
-int choixMenu(int nombre);
 
 void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur2, int load);
 

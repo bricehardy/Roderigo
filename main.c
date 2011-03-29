@@ -9,59 +9,47 @@ int main (int argc, const char * argv[]) {
     Coup coup;
 	Joueur joueur1, joueur2;
 	Othellier dame;
-	int nombre, choix_menu, load;
+	int choix_menu, load;
 	bool statut_programme = True;
 	
 	system("clear");
 	
 	while (statut_programme) {
-		nombre = 0;
+		choix_menu = 0;
 		afficherMenu();
 
-		while(choix_menu < 1 || choix_menu > 5) {
-			scanf("%d", &nombre);
-			choix_menu = choixMenu(nombre);
-
-			if(choix_menu) {
-				switch(nombre) {
-					case 1: /* Choix 1 : Règles */
-						afficherRegles();
-						break;
-					case 2: /* Choix 2 : humain vs humain */
-						load = 0;
-						humainVShumain(&dame, &coup, &joueur1, &joueur2, load);
-						break;
-					case 3: /* Choix 3 : humain vs CPU */
-						printf("Option indisponible pour l'instant");
-						break;
-					case 4: /* Choix 4 : charger partie */
-						/*****************************************************************************************************
-						 *				   Attention !! on ne gère que le cas où c'est humain vs humain						 *
-						 *****************************************************************************************************/
-						load = 1;
-						humainVShumain(&dame, &coup, &joueur1, &joueur2, load);
-						break;
-					case 5: /* Choix 5 : Quitter */
-						printf("Petit joueur!!!");
-						statut_programme = 0;
-						break;
-					default :
-						break;
-				}
-			}
-			else
-				printf("Choix incorrect.\n\nNouveau choix = ");
+		scanf("%d", &choix_menu);
+			
+		switch(choix_menu) {
+			case 1: /* Choix 1 : Règles */
+				afficherRegles();
+				break;
+			case 2: /* Choix 2 : humain vs humain */
+				load = 0;
+				humainVShumain(&dame, &coup, &joueur1, &joueur2, load);
+				break;
+			case 3: /* Choix 3 : humain vs CPU */
+				printf("Option indisponible pour l'instant");
+				break;
+			case 4: /* Choix 4 : charger partie */
+				/*****************************************************************************************************
+				 *				   Attention !! on ne gère que le cas où c'est humain vs humain						 *
+				 *****************************************************************************************************/
+				load = 1;
+				humainVShumain(&dame, &coup, &joueur1, &joueur2, load);
+				break;
+			case 5: /* Choix 5 : Quitter */
+				printf("Petit joueur !!!");
+				statut_programme = 0;
+				break;
+			default :
+				printf("Choix incorrect.");
+				break;
 		}
 	}
 
 	printf("\n");
 	printf("fin");
-	return 0;
-}
-
-int choixMenu(int nombre) {
-	if (nombre >= 1 && nombre <= 5)
-		return nombre;
 	return 0;
 }
 
