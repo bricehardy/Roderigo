@@ -80,7 +80,7 @@ void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur
         compterPions(dame);
     }
     else { /* Si non : on se prépare à la sauvegarder */
-        fichier = fopen("temp.txt", "w");
+        fichier = fopen("temp.txt", "w+");
         nomJoueur(joueur1);
         nomJoueur(joueur2);
 
