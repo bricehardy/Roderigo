@@ -80,7 +80,7 @@ void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur
         compterPions(dame);
     }
     else { /* Si non : on se prépare à la sauvegarder */
-        fichier = fopen("partie.sav", "w");
+        fichier = fopen("temp.txt", "w");
         nomJoueur(joueur1);
         nomJoueur(joueur2);
 
@@ -118,9 +118,16 @@ void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur
 		/* On vérifie si le caractère entré appelle le menu */
 		switch (c) {
 			case 'q': /* On quitte la partie */
+				fclose(fichier);
+                fclose(save);
 				continuer = False;
 				break;
 			case 'l': /* On charge la partie */
+				fclose(fichier);
+                fclose(save);
+                load = 1;
+                continuer = 0;
+                humainVShumain(dame, coup, joueur1, joueur2, load);
 				break;
 			case 'i': /* On annule le coup si possible */
 				if(partie.final > 0) {
@@ -141,11 +148,15 @@ void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur
 				}
 				break;
 			case 's': /* On sauvegarde la partie */
-				sauvegarderPartie(dame, coup, fichier, joueur1, joueur2);
+				save = fopen("partie.sav", "w+");
+				copierFichier(fichier, save);
+				fclose(save);
+				save = fopen("partie.sav", "r+");
+				fseek(save, 0, SEEK_END);
 				printf("Partie sauvegardée\n");
 				break;
 			default: /* Tous les autres cas (en gros si on entre une position ^^) */
-				coup->couleur = ancien_coup;
+				/* coup->couleur = ancien_coup; */
 
 				coup->position = nbEntrer(n, c);
 
