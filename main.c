@@ -77,7 +77,6 @@ void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur
         fclose(save);
         fichier = fopen("temp.txt", "r+");
         coup->couleur = !coup->couleur;
-        compterPions(dame);
     }
     else { /* Si non : on se prépare à la sauvegarder */
         fichier = fopen("temp.txt", "w+");
@@ -91,6 +90,7 @@ void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur
 
 	/* Et apès tout ça, on rentre dans la boucle qui nous permet de jouer */
 	while (continuer) {
+		compterPions(dame);
 	    system("clear");
 
 		/* On verifie si il est encore possible de jouer. Si non, on arrête le jeu */
@@ -100,7 +100,7 @@ void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur
 		}
 
 		calculPossibilite(dame, coup);
-		afficheOthellier(dame, joueur1, joueur2);
+		afficherOthellier(dame, joueur1, joueur2);
 
 		/* On affiche le nom du joueur */
 		if (coup->couleur == NOIR)
@@ -198,7 +198,7 @@ void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur
 	}
 
 	system("clear");
-    afficheOthellier(dame, joueur1, joueur2);
+    afficherOthellier(dame, joueur1, joueur2);
 	printf("Partie terminee\n");
     fclose(fichier);
 

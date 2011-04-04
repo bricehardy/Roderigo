@@ -53,7 +53,7 @@ void afficherRegles(){
 }
 
 /* Fonction qui affiche l'othellier */
-void afficheOthellier(Othellier *dame, Joueur *joueur1, Joueur *joueur2) {
+void afficherOthellier(Othellier *dame, Joueur *joueur1, Joueur *joueur2) {
 	int i, j, k;
 
 	j = k = 1;

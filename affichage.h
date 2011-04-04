@@ -10,7 +10,7 @@
 
 void afficherMenu();
 void afficherRegles();
-void afficheOthellier(Othellier *dame, Joueur *joueur1, Joueur *joueur2);
+void afficherOthellier(Othellier *dame, Joueur *joueur1, Joueur *joueur2);
 void traceLigne();
 
 #endif
