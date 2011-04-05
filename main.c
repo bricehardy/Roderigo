@@ -108,7 +108,7 @@ void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur
 		else
 			printf("Au tour de %s\n",joueur2->nom);
 
-		/* On entre les coordonnees du coup a jouer et on les enregistre*/
+		/* On entre les coordonnees du coup a jouer et on les enregistre */
 		printf("Position = ");
 		scanf("%s", minibuffer);
 
