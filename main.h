@@ -15,9 +15,11 @@
 #include "init.h"
 #include "io.h"
 #include "infos.h"
+#include "minmax.h"
 
 int main (int argc, const char * argv[]);
 
 void humainVShumain(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur2, int load);
+void humainVScpu(Othellier *dame, Coup *coup, Joueur *joueur1, Joueur *joueur2, int load);
 
 #endif
