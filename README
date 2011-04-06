@@ -1,18 +1,18 @@
-Ce programme est un projet √† r√©aliser pour notre deuxi√®me ann√©e de licence de math√©matiques/informatique.
+Ce programme est un projet à réaliser pour notre deuxième année de licence de mathématiques/informatique.
 Il s'agit d'un jeu connu sous le nom d'Othello ou Reversi.
 
-Ci-dessous vous pouvez avoir un aper√ßu des fonctionnalit√©s demand√©es :
-- La position de d√©part doit √™tre respect√©e (les 2 couleurs se croisent).
+Ci-dessous vous pouvez avoir un aperçu des fonctionnalités demandées :
+- La position de départ doit être respectée (les 2 couleurs se croisent).
 - Les pions noirs doivent commencer.
-- Chaque joueur doit √™tre identifi√© par son nom.
-- Un indicateur doit pr√©ciser quel joueur a le trait.
-- Le format √† utiliser por indiquer un coup √† jouer doit √™tre de la forme 'a1'.
-- A chaque instant de la partie le nombre de pion de chaque joueur doit √™tre affich√©.
-- L'ensemble des coups possibles pour le joueur ayant le trait doit √™tre affich√©.
-- Le programme doit d√©tecter lui-m√™me la fin de partie.
-- Une fonction 'Annuler' et ('Refaire') doit √™tre disponible.
+- Chaque joueur doit être identifié par son nom.
+- Un indicateur doit préciser quel joueur a le trait.
+- Le format à utiliser pour indiquer un coup à jouer doit être de la forme 'a1'.
+- À chaque instant de la partie le nombre de pion de chaque joueur doit être affiché.
+- L'ensemble des coups possibles pour le joueur ayant le trait doit être affiché.
+- Le programme doit détecter lui-même la fin de partie.
+- Une fonction 'Annuler' et ('Refaire') doit être disponible.
 - Fonction de sauvegarde et de chargement de la partie.
-- Possibilit√© de jouer contre l'ordinateur avec une difficult√© variable.
+- Possibilité de jouer contre l'ordinateur avec une difficulté variable.
 
-En plus, on peut r√©aliser :
+En plus, on peut réaliser :
 - Une interface graphique (pour sortir du terminal...)
