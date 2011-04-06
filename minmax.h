@@ -1,3 +1,8 @@
+/*
+ *  minmax.h
+ *  Roderigo
+ */
+
 #ifndef __MINMAX__
 #define __MINMAX__
 

@@ -1,3 +1,8 @@
+/*
+ *  minmax.c
+ *  Roderigo
+ */
+
 #include "minmax.h"
 
 /* **************************************************************************************/
@@ -203,4 +208,3 @@ int alphaBeta(int profondeur, int alpha, int beta){
 	}
 	return alpha;
 }
-
