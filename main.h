@@ -9,6 +9,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
 #include "structures.h"
 #include "affichage.h"
 #include "gestion.h"

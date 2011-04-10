@@ -48,4 +48,20 @@ struct Partie {
 typedef int bool;
 enum {False, True};
 
+typedef struct Individu *Individu;
+struct Individu {
+	double gene[TAILLE_GENOME];
+	double fitness;
+	double rosenbrock;
+};
+
+typedef struct Population *Population;
+struct Population {
+	Individu *genome;
+	int taille;
+	double fitness;	
+};
+
+typedef int *loterie;
+
 #endif

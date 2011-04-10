@@ -27,4 +27,6 @@
 #define SO 9
 #define SE 11
 
+#define TAILLE_GENOME 2
+
 #endif
