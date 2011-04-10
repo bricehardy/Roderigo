@@ -201,6 +201,7 @@ int alphaBeta(int profondeur, int alpha, int beta){
 			if(score >= alpha){
 				alpha = score;
 				meilleur_coup = dame.damier[i];
+				coup.position = meilleur_coup;
 				if(alpha >= beta)
 					break;
 			}
